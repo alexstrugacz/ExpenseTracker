@@ -2,6 +2,7 @@ import Expenses from "./components/Expenses/Expenses";
 
 function App() {
   const expenses = [
+    //placeholder data
     {
       id: "e1",
       title: "Toilet Paper",

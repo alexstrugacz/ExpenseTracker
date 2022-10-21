@@ -2,7 +2,7 @@ import Expenses from "./components/Expenses/Expenses";
 import React from "react";
 import NewExpense from "./components/NewExpense/NewExpense";
 
-function App() {
+const App = () => {
   const expenses = [
     //placeholder data
     {
@@ -26,12 +26,17 @@ function App() {
     },
   ];
 
+  const addExpenseHandler = (expense) => {
+    console.log("in app.js");
+    console.log(expense);
+  };
+
   return (
     <div>
-      <h2>Let's get started!</h2>
+      <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
       <Expenses items={expenses} />
     </div>
   );
-}
+};
 
 export default App;

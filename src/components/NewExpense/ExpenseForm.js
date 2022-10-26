@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./ExpenseForm.css";
-import NewExpense from "./NewExpense";
 
 const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState("");
@@ -44,6 +43,8 @@ const ExpenseForm = (props) => {
     setEnteredTitle("");
     setEnteredAmount("");
     setEnteredDate("");
+    //(new) also close form after new expense is submitted
+    changeFormState();
   };
 
   const [formIsShown, setFormIsShown] = useState(false);
@@ -56,11 +57,11 @@ const ExpenseForm = (props) => {
     }
   };
 
+  const open = <button onClick={changeFormState}>New Expense</button>;
+
   const cancelForm = () => {
     setFormIsShown(false);
   };
-
-  const open = <button onClick={changeFormState}>New Expense</button>;
 
   if (formIsShown === true) {
     return (
@@ -96,11 +97,15 @@ const ExpenseForm = (props) => {
               />
             </div>
           </div>
-          <button type="submit">Add Expense</button>
-          <button onClick={cancelForm}>Cancel</button>
+          <div className="new-expense__actions">
+            <button type="submit">Add Expense</button>
+            <button onClick={cancelForm}>Cancel</button>
+          </div>
         </form>
       </div>
     );
+    //if user has not opened the form
+    //return the button used to open it
   } else return open;
 };
 

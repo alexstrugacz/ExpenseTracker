@@ -1,6 +1,6 @@
 import React from "react";
 import "./ChartBar.css";
-
+//Expense Statistics Bar
 const ChartBar = (props) => {
   return (
     <div className="chart-bar">

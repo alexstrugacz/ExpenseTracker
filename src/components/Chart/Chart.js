@@ -2,6 +2,8 @@ import React from "react";
 import ChartBar from "./ChartBar";
 import "./Chart.css";
 
+//Sleep
+//Dynamic chart corresponding to user input expense information
 const Chart = (props) => {
   const dataPointValues = props.dataPoints.map((dataPoint) => dataPoint.value);
   //use "..." spread operator to switch dataPoints array into standalone argument, returns 12 arguments (12 months)

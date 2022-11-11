@@ -3,6 +3,7 @@ import ChartBar from "./ChartBar";
 import "./Chart.css";
 
 //Sleep
+//Sleep
 //Dynamic chart corresponding to user input expense information
 const Chart = (props) => {
   const dataPointValues = props.dataPoints.map((dataPoint) => dataPoint.value);

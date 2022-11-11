@@ -4,6 +4,7 @@ import "./index.css";
 import App from "./App";
 import firebase from "firebase/app";
 
+//Firebase initialization
 firebase.initializeApp({
   apiKey: "AIzaSyBwmsNdPj-Kdszor0aRunAduqy_ND-UDl4",
   authDomain: "expensetracker-8bb26.firebaseapp.com",
